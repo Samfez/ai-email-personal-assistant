@@ -1,0 +1,18 @@
+# env and secrets
+.venv/
+.env
+.env.*
+!.env.example
+CLAUDE.md
+
+# python
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# macOS / editors
+.DS_Store
+.vscode/
+.idea/

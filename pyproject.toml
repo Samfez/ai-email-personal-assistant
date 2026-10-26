@@ -1,0 +1,6 @@
+[project]
+name = "ai-email-personal-assistant"
+version = "0.1.0"
+description = "A cohort project for building an AI email and calendar assistant"
+requires-python = ">=3.12"
+dependencies = []
