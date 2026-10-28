@@ -11,6 +11,7 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 .pytest_cache/
+*.pyc
 
 # macOS / editors
 .DS_Store
