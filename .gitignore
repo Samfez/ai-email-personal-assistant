@@ -13,6 +13,9 @@ __pycache__/
 .pytest_cache/
 *.pyc
 
+# Local webhook captures
+requests/events/*.json
+
 # macOS / editors
 .DS_Store
 .vscode/

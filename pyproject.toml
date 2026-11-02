@@ -3,4 +3,10 @@ name = "ai-email-personal-assistant"
 version = "0.1.0"
 description = "A cohort project for building an AI email and calendar assistant"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "fastapi>=0.162.0",
+    "jinja2>=3.1.6",
+    "nylas>=6.18.0",
+    "python-dotenv>=1.2.4",
+    "uvicorn>=0.54.0",
+]

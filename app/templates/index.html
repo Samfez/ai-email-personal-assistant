@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nylas Webhooks</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+        th { background: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>Nylas Webhooks Received</h1>
+    {% if webhooks %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Subject</th>
+                    <th>From Name</th>
+                    <th>From Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for webhook in webhooks %}
+                <tr>
+                    <td>{{ webhook.id }}</td>
+                    <td>
+                        {# Convert timestamp to readable date #}
+                        {{ webhook.date | int}}
+                    </td>
+                    <td>{{ webhook.subject }}</td>
+                    <td>
+                        {% if webhook.from_ and webhook.from_[0].name %}
+                            {{ webhook.from_[0].name }}
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if webhook.from_ and webhook.from_[0].email %}
+                            {{ webhook.from_[0].email }}
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No webhooks received yet.</p>
+    {% endif %}
+</body>
+</html>
